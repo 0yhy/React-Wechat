@@ -2,9 +2,9 @@ $wechat-green:                          rgb(8, 193, 97);
 
 .footer {
     display:                            flex;
-    position:                           absolute;
+    position:                           fixed;
     width:                              100%;
-    border-top:                         .2px solid black;
+    border-top:                         .2px solid rgb(218, 215, 215);
     bottom:                             0;
     height:                             8%;
     align-items:                        center;
@@ -20,11 +20,11 @@ $wechat-green:                          rgb(8, 193, 97);
 }
 
 .box {
-    // overflow:                           hidden;
-    // width:                              40px;
+    overflow:                           hidden;
+    width:                              40px;
 }
 .current {
-    filter:                             drop-shadow(30px 0px $wechat-green);
+    filter:                             drop-shadow(40px 0px $wechat-green);
     position:                           relative;
-    left:                               -30px;
+    left:                               -40px;
 }

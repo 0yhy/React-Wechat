@@ -1,9 +1,10 @@
 import React from "react";
-import css from "./MessageItem.module.scss"
+import css from "./MessageItem.module.scss";
+import imgs from "./../../../assets/profile/img";
 
-const requireContext = require.context("./../../../assets/profile/",true, /^\.\/.*\.jpg$/);
+import {withRouter} from "react-router-dom";//用来处理非路由组件要用到history的情况
 
-export default class MessageItem extends React.Component {
+class MessageItem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -11,14 +12,9 @@ export default class MessageItem extends React.Component {
         }
     }
     render() {
-        
-        let currentImg = requireContext.keys()[this.props.id];
-        console.log(typeof(currentImg))
-        let imgUrl = "./../../../assets/profile/" + String(currentImg).slice(2);
-        let imgURL = "./../../../assets/profile/0.jpg";
-        // console.log(imgUrl);
-        return <div className={css.comment}>
-            <img src={imgURL} alt="" width="50px" height="50px"/>
+        return <div className={css.comment} onClick={() => {this.props.history.push(`/chat/${this.props.id}`)}}>
+            <img className={css.imgs} src={imgs["img"+this.props.id]} alt="" width="50px" height="50px"/>
+            {/* <img src={require(`./../../../assets/profile/${this.props.id}.jpg`)}/> */}
             <span className={css.contentandtime}>
                 <span className={css.content}>
                     <h2>{this.props.user}</h2>
@@ -31,3 +27,5 @@ export default class MessageItem extends React.Component {
         </div>
     }
 }
+
+export default withRouter(MessageItem);//用来处理非路由组件要用到history的情况

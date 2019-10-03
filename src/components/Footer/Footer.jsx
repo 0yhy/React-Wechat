@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./Footer.module.scss"
+import css from "./Footer.module.scss";
 
 export default class Footer extends React.Component {
     constructor(props) {
@@ -8,18 +8,26 @@ export default class Footer extends React.Component {
     }
     render() {
         return <div className={css.footer} >
-            <span className={css.box} onClick={this.switchCurrent}>
-                <span className={css.current}><img src={require("./../../assets/chat.svg")} width="20px" alt=""/>微信</span>
-            </span>
-            <span className={css.box} onClick={this.switchCurrent}>
-                <span><img src={require("./../../assets/contact.svg")} width="20px" alt=""/>通讯录</span>
-            </span>
-            <span className={css.box} onClick={this.switchCurrent}>
-                <span><img src={require("./../../assets/discovery.svg")} width="20px" alt=""/>发现</span>
-            </span>
-            <span className={css.box} onClick={this.switchCurrent}>
-                <span><img src={require("./../../assets/me.svg")} width="20px" alt=""/>我</span>
-            </span>         
+            <a href="#/wechat">
+                <span className={css.box} onClick={this.switchCurrent}>
+                    <span className={css.current}><img src={require("./../../assets/chat.svg")} width="20px" alt=""/>微信</span>
+                </span>
+            </a>
+            <a href="#/contact">
+                <span className={css.box} onClick={this.switchCurrent}>
+                    <span><img src={require("./../../assets/contact.svg")} width="20px" alt=""/>通讯录</span>
+                </span>
+            </a>
+            <a href="#/discovery">
+                <span className={css.box} onClick={this.switchCurrent}>
+                    <span><img src={require("./../../assets/discovery.svg")} width="20px" alt=""/>发现</span>
+                </span>
+            </a>
+            <a href="#/me">
+                <span className={css.box} onClick={this.switchCurrent}>
+                    <span><img src={require("./../../assets/me.svg")} width="20px" alt=""/>我</span>
+                </span>        
+            </a> 
         </div>
     }
 

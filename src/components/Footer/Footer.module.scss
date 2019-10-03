@@ -28,3 +28,10 @@ $wechat-green:                          rgb(8, 193, 97);
     position:                           relative;
     left:                               -40px;
 }
+
+a {
+    outline:                            none;
+    text-decoration:                    none;
+    color:                              rgb(81, 81, 81);
+    -webkit-tap-highlight-color:        transparent;        //删除点击链接时周围出现的边框
+}

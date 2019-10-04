@@ -105,3 +105,58 @@ text-overflow:	ellipsis;
 ### 关于`.module.css`需要注意的
 
 如果在`.module.css`等文件中使用了自带的标签名指定元素样式，那么会作用于全局
+
+
+
+## 20191004
+
+### 子元素绝对定位撑不开父元素的问题
+
+昨天发现父元素的`background-color`怎么都设置不出来，扬姐说了之后才注意子元素的定位都是`absolute`，脱离了文档流
+
+### 后台应用
+
+`node + express`
+
+### 使用`postman`发送请求
+
+1. 请求路径
+2. 请求方式
+3. 请求参数
+
+![1570195943219](E:\BingYan\internship\%5CUsers%5CLucyS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570195943219.png)
+
+### 后台应用怎样自动重运行
+
+解决：下载`nodemon`包
+
+`npm install --save-dev nodemon`
+
+配置：在`package.json`中，用`nodemon`在`start`中代替`node`
+
+### 数据库
+
+**下载`mongoose`、`blueimp-md5`（用于加密）**
+
+`npm install --save mongoose blueimp-md5`
+
+```javascript
+//1. 连接数据库
+//引入mongoose
+const mongoose = require("mongoose");
+//使用引入模块的方法 连接指定数据库
+mongoose.connect("mongodb://localhost:27017/db_test")
+//获取连接对象
+const conn = mongoose.connection;
+//绑定连接完成的监听
+conn.on("connected", function() {
+    console.log("数据库连接成功，✌")
+})
+```
+
+其中：
+
+* `mongodb://`是协议
+* `localhost`是本地地址
+* `:27017`是`mongodb`数据库本地的**端口号**
+* `db_test`是数据库名

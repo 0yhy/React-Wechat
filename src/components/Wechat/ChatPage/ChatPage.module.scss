@@ -1,17 +1,18 @@
 .subscription {
     background-color:                           rgb(237, 237, 237);
-    // color:white;
 }
+//常读的订阅号消息一整栏
 .usually {
     top:                                        45px;
-    position:                                   absolute;
     width:                                      100%;
+    position:                                   absolute;
     font-size:                                  75%;
     color:                                      rgb(120, 119, 123);
-    p {//常读的订阅号消息
+    p {//常读的订阅号消息文本
         margin:                                 5px 0px 15px 5px;
     }
 }
+//常度订阅号的滚动栏
 .usually_icons {
     display:                                    flex;
     width:                                      96%;
@@ -32,7 +33,7 @@
         text-align:                             center;
     }
 }
-
+//常读订阅号图标
 .usually_icons img {
     border-radius:                              50%;
 }

@@ -9,6 +9,7 @@ import Footer from "../../components/Footer/Footer";
 import ChatPage from "../../components/Wechat/ChatPage/ChatPage";
 
 
+
 export default class Main extends React.Component {
     navList = [
         {

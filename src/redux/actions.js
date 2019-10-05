@@ -22,7 +22,7 @@ export const register = (user) => {
     return async dispatch => {
         //发送注册的异步ajax请求
         const response = await reqRegister({username, password0});
-        console.log("response:::", response);
+        console.log(response);
         const result = response.data;
         if(result.code === 0) {
             //分发成功的action

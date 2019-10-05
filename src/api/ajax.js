@@ -42,14 +42,13 @@ export default function ajax(url, data={}, type="GET") {
             getString.slice(0, -1);//去掉最后一个&
         }
 
-        Ajax(url, getString, "GET");
+        return Ajax(url, getString, "GET");
 
         // return axios.get(url + "?" + getString);
     }
     else {
-        console.log(data)
         getString = "username=" + data.username + "password=" + data.password0;
-        Ajax(url, getString, "POST");
+        return Ajax(url, getString, "POST");
         // return axios.post(url, data);
     }
 }

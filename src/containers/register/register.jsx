@@ -15,7 +15,7 @@ class Register extends React.Component {
         }
     }
     
-    registerd = () => {
+    register = () => {
         this.props.register(this.state);
     }
     render() {
@@ -28,7 +28,7 @@ class Register extends React.Component {
                     <input placeholder="Repeat Password" onChange={(e) => this.setState({password1:e.target.value})}></input>
                 </div>
 
-                <img src={require("../../assets/login_register/enter.svg") } alt="" width="40px" onClick={this.registerd}/>
+                <img src={require("../../assets/login_register/enter.svg") } alt="" width="40px" onClick={this.register}/>
                 <a href="#/login"><p>Sign In</p></a>
                 
             </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./MessageItem.module.scss";
-import imgs from "./../../../assets/profile/img";
+import imgs from "../../../../assets/profile/img";
 
 import {withRouter} from "react-router-dom";//用来处理非路由组件要用到history的情况
 

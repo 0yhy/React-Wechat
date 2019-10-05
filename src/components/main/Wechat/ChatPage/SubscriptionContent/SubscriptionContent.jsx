@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./SubscriptionContent.module.scss";
-import imgs from "../../../../assets/subscriptions/img";
+import imgs from "../../../../../assets/subscriptions/img";
 
 const MAX_ESSAY_NUM = 2;
 

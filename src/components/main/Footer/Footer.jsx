@@ -10,22 +10,22 @@ export default class Footer extends React.Component {
         return <div className={css.footer} >
             <a href="#/wechat">
                 <span className={css.box} onClick={this.switchCurrent}>
-                    <span className={css.current}><img src={require("./../../assets/chat.svg")} width="20px" alt=""/>微信</span>
+                    <span className={css.current}><img src={require("../../../assets/chat.svg")} width="20px" alt=""/>微信</span>
                 </span>
             </a>
             <a href="#/contact">
                 <span className={css.box} onClick={this.switchCurrent}>
-                    <span><img src={require("./../../assets/contact.svg")} width="20px" alt=""/>通讯录</span>
+                    <span><img src={require("../../../assets/contact.svg")} width="20px" alt=""/>通讯录</span>
                 </span>
             </a>
             <a href="#/discovery">
                 <span className={css.box} onClick={this.switchCurrent}>
-                    <span><img src={require("./../../assets/discovery.svg")} width="20px" alt=""/>发现</span>
+                    <span><img src={require("../../../assets/discovery.svg")} width="20px" alt=""/>发现</span>
                 </span>
             </a>
             <a href="#/me">
                 <span className={css.box} onClick={this.switchCurrent}>
-                    <span><img src={require("./../../assets/me.svg")} width="20px" alt=""/>我</span>
+                    <span><img src={require("../../../assets/me.svg")} width="20px" alt=""/>我</span>
                 </span>        
             </a> 
         </div>

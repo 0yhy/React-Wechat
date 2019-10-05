@@ -184,3 +184,7 @@ conn.on("connected", function() {
 * `store`：保存公共数据的地方，一个应用只能创建一个`store`
 * `action`: 改变`state`的唯一方法, 它的本质是一个对象, 必须要写一个代表`action`名称的属性 - `type`
 * `reducer`: 计算`state`的函数, 接收两个参数: 当前`state`与`action`
+
+### 谷歌禁止同源
+
+`.\chrome.exe --allow-file-access-from-files --user-data-dir="C:/Chrome dev session" --disable-web-security`

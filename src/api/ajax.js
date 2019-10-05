@@ -1,8 +1,6 @@
-// import axios from "axios";
+import axios from "axios";
 
 var Ajax = (url, getString, type) => {
-    console.log("url:", url);
-    console.log("str:", getString);
     let xhr;
     if(window.XMLHttpRequest) {
         xhr = new XMLHttpRequest();
@@ -42,13 +40,13 @@ export default function ajax(url, data={}, type="GET") {
             getString.slice(0, -1);//去掉最后一个&
         }
 
-        return Ajax(url, getString, "GET");
+        // return Ajax(url, getString, "GET");
 
-        // return axios.get(url + "?" + getString);
+        return axios.get(url + "?" + getString);
     }
     else {
         getString = "username=" + data.username + "password=" + data.password0;
-        return Ajax(url, getString, "POST");
-        // return axios.post(url, data);
+        // return Ajax(url, getString, "POST");
+        return axios.post(url, data);
     }
 }

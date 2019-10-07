@@ -1,0 +1,16 @@
+export default {
+    img5d99925716c85e07841dbf5b: require("./0.jpg"),
+    img5d99927316c85e07841dbf5c: require("./1.jpg"),
+    img5d99927316c85e07841dbf5e: require("./2.jpg"),
+    img5d99927316c85e07841dbf5f: require("./3.jpg"),
+    img5d99927316c85e07841dbf60: require("./4.jpg"),
+    img5d99927316c85e07841dbf61: require("./5.jpg"),
+    img5d99927316c85e07841dbf62: require("./6.jpg"),
+    img5d99927316c85e07841dbf63: require("./7.jpg"),
+    img5d99927316c85e07841dbf64: require("./9.jpg"),
+    img5d99927316c85e07841dbf65: require("./10.jpg"),
+    img5d99927316c85e07841dbf66: require("./8.jpg"),
+    img5d99927316c85e07841dbf67: require("./10.jpg"),
+    img5d99927316c85e07841dbf68: require("./11.jpg"),
+    img5d99927316c85e07841dbf69: require("./12.jpg"),
+}

@@ -1,33 +1,6 @@
 import axios from "axios";
 
-var Ajax = (url, getString, type) => {
-    let xhr;
-    if(window.XMLHttpRequest) {
-        xhr = new XMLHttpRequest();
-    }
-    else {
-    }
-    xhr.onreadystatechange = function() {
-        if(xhr.readyState === 4 && xhr.status === 200) {
-            console.log(xhr.responseText);
-        }
-        else {
-            console.log("readystate:", xhr.readyState);
-            console.log("status", xhr.status)
-        }
-    }
-    if(type === "GET") {
-        xhr.open("GET", url + "?" + getString);
-        xhr.send();
-    }
-    else {
-        xhr.open("POST", url, true);
-        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xhr.send(getString);
-    }
-}
-
-export default function ajax(url, data={}, type="GET") {
+export default function ajax(url,  type="GET", data={}) {
     let getString = "";
     if(type === "GET") {
         //data: {username:shaun, password:123}
@@ -39,14 +12,10 @@ export default function ajax(url, data={}, type="GET") {
         if(getString) {//如果得到的string不为空
             getString.slice(0, -1);//去掉最后一个&
         }
-
-        // return Ajax(url, getString, "GET");
-
-        return axios.get(url + "?" + getString);
+        return axios.get(url + "?" + getString, {withCredentials:true});
     }
     else {
-        getString = "username=" + data.username + "password=" + data.password0;
-        // return Ajax(url, getString, "POST");
-        return axios.post(url, data);
+        getString = "username=" + data.username + "password=" + data.password;
+        return axios.post(url, data, {withCredentials:true});
     }
 }

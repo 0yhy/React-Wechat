@@ -1,6 +1,6 @@
 import React from "react";
 import WechatHeader from "./WechatHeader/WechatHeader"
-import MessageList from "./MessageList/MessageList"
+import MessageList from "../../../containers/Message/Message"
 
 export default class Wechat extends React.Component {
     constructor(props) {

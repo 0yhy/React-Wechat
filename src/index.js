@@ -6,6 +6,7 @@ import Login from "./containers/login/login";
 import Register from "./containers/register/register";
 import {Provider} from "react-redux";
 import store from "./redux/store";
+// import "./test/socketio_test";
 
 ReactDOM.render((
     <Provider store={store}>

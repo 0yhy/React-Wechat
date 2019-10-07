@@ -188,3 +188,14 @@ conn.on("connected", function() {
 ### 谷歌禁止同源
 
 `.\chrome.exe --allow-file-access-from-files --user-data-dir="C:/Chrome dev session" --disable-web-security`
+
+### 跨域后端设置问题
+
+```
+res.header(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild"
+  );
+```
+
+`app.all()`放在`app.use()`前

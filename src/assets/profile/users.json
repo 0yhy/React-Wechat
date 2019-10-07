@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "5d99925716c85e07841dbf5b",
+    "username": "Amy",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d99927316c85e07841dbf5c",
+    "username": "Alice",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d99927816c85e07841dbf5d",
+    "username": "Anna",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d99927c16c85e07841dbf5e",
+    "username": "Bob",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d99928216c85e07841dbf5f",
+    "username": "Daisy",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d99928916c85e07841dbf60",
+    "username": "Chloe",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d99929416c85e07841dbf61",
+    "username": "Crystal",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d99929c16c85e07841dbf62",
+    "username": "Ella",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d9992c416c85e07841dbf63",
+    "username": "Eve",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d9992cd16c85e07841dbf64",
+    "username": "Shaun",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d9992d116c85e07841dbf65",
+    "username": "Shaw",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d9992d516c85e07841dbf66",
+    "username": "Shawn",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d99978d16c85e07841dbf67",
+    "username": "Taylor",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d99979c16c85e07841dbf68",
+    "username": "Jemma",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  },
+  {
+    "_id": "5d9997af16c85e07841dbf69",
+    "username": "Fitz",
+    "password": "202cb962ac59075b964b07152d234b70",
+    "__v": 0
+  }
+]

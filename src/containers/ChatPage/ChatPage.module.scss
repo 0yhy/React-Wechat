@@ -1,0 +1,65 @@
+.header {
+    background-color:                               rgb(237, 237, 237);
+    height:                                         45px;
+    width:                                          100%;
+    position:                                       fixed;
+    top:                                            0;
+    font-size:                                      70%;
+    display:                                        flex;
+    flex-direction:                                 row;
+    align-items:                                    center;
+    z-index:                                        2;
+    h2 {
+        width:                                      80%;
+        margin:                                     0px 0px 0px 10px;
+        font-size:                                  130%;
+    }
+    img {
+        margin:                                     0px 15px 0px 5px;
+    }
+}
+
+.input {
+    padding:                                        0px 10px 0px 10px;
+    position:                                       fixed;
+    bottom:                                         0;
+    width:                                          100%;
+    input {
+        width:                                      80%;
+    }
+}
+.chatBubles {
+    position:                                       absolute;
+    top:                                            45px;
+    bottom:                                         8%;
+    width:                                          100%;
+    display:                                        flex;
+    flex-direction:                                 column;
+    overflow-y:                                     scroll;
+}
+.me {
+    width:                                          80%;
+    text-align:                                     right;
+    position:                                       relative;
+    left:                                           20%;
+    margin:                                         10px 0px 10px 0;
+}
+.heorshe {
+    width:                                          80%;    
+    margin:                                         10px 0 10px 0px;
+}
+.mebuble {
+    background-color:                               rgb(38, 131, 245);
+    padding:                                        10px;
+    border-radius:                                  5px;
+    margin:                                         0px 5px 0px 0px;
+}
+.heorshebuble {
+    background-color:                               rgb(237, 237, 237);
+    padding:                                        10px;
+    border-radius:                                  5px;    
+    margin:                                         0px 0px 0px 5px;
+}
+.profiles {
+    border-radius:                                  50%;
+}

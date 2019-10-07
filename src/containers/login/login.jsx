@@ -1,7 +1,11 @@
 import React from "react";
 import css from "./login.module.scss"
 
-export default class Login extends React.Component {
+import { connect } from "react-redux";
+import { login } from "../../redux/actions";
+import { Redirect } from "react-router-dom";
+
+class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -10,12 +14,17 @@ export default class Login extends React.Component {
         }
     }
     login = () => {
-        console.log(this.state);
+        this.props.login(this.state);
     }
     render() {
+        const {msg, redirectTo} = this.props.user;
+        if(redirectTo) {
+            return <Redirect to={redirectTo}></Redirect>
+        }
         return <div className={css.register}>
             <div className={css.signup}>
                     <h1>Sign In</h1>
+                {msg ? <div className={css.errmsg}>{msg}</div> : null}
                 <div className={css.inputs}>
                     <input placeholder="Username" onChange={(e) => this.setState({username:e.target.value})}></input>
                     <input placeholder="Password" onChange={(e) => this.setState({password:e.target.value})}></input>
@@ -28,3 +37,7 @@ export default class Login extends React.Component {
         </div>
     }
 }
+
+export default connect(
+    state => ({user: state.user}), {login}
+)(Login)

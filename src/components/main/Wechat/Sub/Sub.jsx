@@ -1,7 +1,7 @@
 import React from "react";
-import SubscriptionHeader from "../ChatPage/SubscriptionHeader/SubscriptionHeader"
-import Subscription from "../ChatPage/Subscription/Subscription";
-import css from "./ChatPage.module.scss";
+import SubscriptionHeader from "./SubscriptionHeader/SubscriptionHeader"
+import Subscription from "./Subscription/Subscription";
+import css from "./Sub.module.scss";
 
 export default class ChatPage extends React.Component {
     render() {

@@ -11,8 +11,9 @@ import Footer from "../../components/main/Footer/Footer";
 import ChatPage from "../../containers/ChatPage/ChatPage";
 import Sub from "../../components/main/Wechat/Sub/Sub";
 import Login from "../login/login";
+import SendCircle from "../Discovery/SendCircle/SendCircle";
 
-import {getUser} from "../../redux/actions";
+import {getUser, sendCircle} from "../../redux/actions";
 
 
 
@@ -43,6 +44,7 @@ class Main extends React.Component {
     componentDidMount() {
         const userid = Cookies.get("userid");
         const {_id} = this.props.user;
+
         if(userid && !_id) {
             this.props.getUser();
         }
@@ -81,6 +83,7 @@ class Main extends React.Component {
              {/* <Route path="/" component={Wechat}></Route> */}
              <Route path="/chat/:user_id" component={ChatPage}></Route>
              <Route path="/sub" component={Sub}></Route>
+             <Route path="/sendCircle" component={SendCircle}></Route>
              {/*如果当前的path和我们已有的path相等，那么显示footer，否则不显示 */}
              {currentNav ? <Footer></Footer> : null}
         </div>

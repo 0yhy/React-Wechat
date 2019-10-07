@@ -17,24 +17,6 @@
     img {
         margin:                                     0px 15px 0px 5px;
     }
-}
-
-.input {
-    padding:                                        0px 10px 0px 10px;
-    position:                                       fixed;
-    bottom:                                         0;
-    width:                                          100%;
-    background-color:                               whitesmoke;
-    height:                                         8%;
-    display:                                        flex;
-    align-items:                                    center;
-    input {
-        width:                                      80%;
-        border:                                     none;
-        height:                                     70%;
-        border-radius:                              30px;
-        margin:                                     0px 5px 0px 0px;
-    }
     button {
         width:                                      50px; /* 宽度 */
         height:                                     30px; /* 高度 */
@@ -48,38 +30,23 @@
         margin:                                     0px 10px 0px 0px;
     }
 }
-.chatBubles {
+
+.input {
     position:                                       absolute;
     top:                                            45px;
-    bottom:                                         9%;
+    bottom:                                         8%;
     width:                                          100%;
     display:                                        flex;
     flex-direction:                                 column;
     overflow-y:                                     scroll;
-}
-.me {
-    width:                                          80%;
-    text-align:                                     right;
-    position:                                       relative;
-    left:                                           20%;
-    margin:                                         10px 0px 10px 0;
-}
-.heorshe {
-    width:                                          80%;    
-    margin:                                         10px 0 10px 0px;
-}
-.mebuble {
-    background-color:                               rgb(38, 131, 245);
-    padding:                                        10px;
-    border-radius:                                  5px;
-    margin:                                         0px 5px 0px 0px;
-}
-.heorshebuble {
-    background-color:                               white;
-    padding:                                        10px;
-    border-radius:                                  5px;    
-    margin:                                         0px 0px 0px 5px;
-}
-.profiles {
-    border-radius:                                  50%;
+    textarea {
+        // width:                                      90%;
+        // margin-left:                                5%;
+        height:                                     50%;
+        border:                                     none;
+        border-radius:                              20px;
+        padding:                                    10px;
+        font-family:                                'Times New Roman', Times, serif;
+        font-size:                                  95%;
+    }
 }

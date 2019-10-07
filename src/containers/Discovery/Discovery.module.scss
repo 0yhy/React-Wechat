@@ -1,3 +1,6 @@
+html {
+    background-color:                               rgb(237, 237, 237);
+}
 .header {
     background-color:                               rgb(237, 237, 237);
     height:                                         45px;
@@ -19,11 +22,39 @@
     }
 }
 
+.all {
+    position:                                       absolute;
+    top:                                            45px;
+    bottom:                                         8%;
+    width:                                          100%;
+    display:                                        flex;
+    flex-direction:                                 column-reverse;
+    overflow-y:                                     scroll;
+}
 
 .circleheader {
-    display:                                flex;
-    flex-direction:                         row;
+    display:                                        flex;
+    flex-direction:                                 row;
     img {
-        border-radius:                      50%;
+        border-radius:                              50%;
     }
+}
+
+.onecircle {
+    margin:                                         5px 0px 5px 0px;
+    padding:                                        10px;
+    background-color:                               white;
+}
+
+.icons {
+    display:                                        flex;
+    align-items:                                    center;
+    justify-content:                                flex-end;
+    img {
+        margin:                                     0px 5px 0px 5px;
+    }
+}
+
+.content {
+    margin:                                         10px 0px 10px 0px;
 }

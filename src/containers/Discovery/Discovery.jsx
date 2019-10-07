@@ -2,6 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import css from "./Discovery.module.scss";
 import {sendCircle, getCircleList} from "../../redux/actions";
+import {withRouter} from "react-router-dom";//用来处理非路由组件要用到history的情况
 // import imgs from "../../assets/profile/imgs";
 
 class Discovery extends React.Component {
@@ -16,7 +17,7 @@ class Discovery extends React.Component {
     }
     sendCircle = () => {
         const user = this.props.user._id;
-        console.log(user);
+        // console.log(user);
         const content = this.state.content.trim();
         if(content) {
             this.props.sendCircle({user, content});
@@ -25,19 +26,16 @@ class Discovery extends React.Component {
     //     this.setState({content:""})
     }
     render() {
-        
-
         const {users, circleMsgs} = this.props.circle;
+        // console.log(circleMsgs);
         
-        console.log(circleMsgs);
-        
-        return <div>
+        return <div className={css.all}>
             <div className={css.header}>
-                <img src={require("../../assets/subscription_header/back.svg")} alt="" width="20px" onClick={() => {window.history.back()}}></img>
                 <h2>朋友圈</h2>
-                <img src={require("../../assets/subscription_header/more.svg")} alt="" width="20px"></img>
+                <img src={require("../../assets/wechat_header/search.svg")} alt="" width="20px"></img>
+                <img src={require("../../assets/wechat_header/add.svg")} alt="" width="20px" onClick={() => this.props.history.push("/sendCircle")}></img>
             </div>
-            {circleMsgs.map((item, index) => <div key={index}>
+            {circleMsgs.map((item, index) => <div key={index} className={css.onecircle}>
                 <div className={css.circleheader}>
                     <img src={require(`../../assets/profile/${item.user}.jpg`)} alt="" width="45px"></img>
                     <p>{users[item.user].username}</p>
@@ -45,17 +43,16 @@ class Discovery extends React.Component {
                 <div className={css.content}>
                     <p>{item.content}</p>
                 </div>
-                
-
+                <div className={css.icons}>
+                    <img src={require("../../assets/circle/like.svg")} alt="" width="20px"></img>
+                    <img src={require("../../assets/circle/comment.svg")} alt="" width="20px"></img>
+                    <img src={require("../../assets/circle/repost.svg")} alt="" width="20px"></img>
+                </div>
             </div>)}
-            <div className={css.input}>
-                <input onChange={(e) => {this.setState({content: e.target.value})}} value={this.state.content}></input>
-                <button onClick={this.sendCircle}>发送</button>
-            </div>
         </div>
     }
 }
 
 export default connect(
     state => ({user: state.user, circle: state.circle}),{sendCircle, getCircleList}
-)(Discovery)
+)(withRouter(Discovery))

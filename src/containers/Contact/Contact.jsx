@@ -64,7 +64,7 @@ class Contact extends React.Component {
             <div className={css.all}>
                 <div className={css.contacts}>
                     {isdisplay.map((item, index) => item === 0 ? null : <div key={index} className={css.indexandname}>
-                        <h1 className={css.indexs}>{String.fromCharCode(index + 65)}</h1>
+                        <h1 className={css.indexs} id={String.fromCharCode(index + 65)}>{String.fromCharCode(index + 65)}</h1>
                         {section[index].map((i, idx) => <div key={idx} className={css.names} onClick={() => this.props.history.push(`/chat/${i._id}`)}>
                             <img src={require(`../../assets/profile/${i._id}.jpg`)} alt="" width="30px"></img>
                             {i.name}
@@ -72,7 +72,11 @@ class Contact extends React.Component {
                     </div>)}                          
                 </div>
                 <div className={css.letters}>
-                    {isdisplay.map((item, index) => item === 0 ? null : <span key={index}>
+                    {isdisplay.map((item, index) => item === 0 ? null : <span key={index} onClick={() => {
+                        document.querySelector("#" + String.fromCharCode(index + 65)).scrollIntoView();
+                    }} onmousedown={() => {
+                        this.onmouseover = () => document.querySelector("#" + String.fromCharCode(index + 65)).scrollIntoView();
+                    }}>
                         {String.fromCharCode(index + 65)}
                     </span>)}
                 </div>

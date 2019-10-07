@@ -128,9 +128,9 @@ export const getCircleList = () => {
         }
     }
 }
-export const sendCircle = ({users, content}) => {
+export const sendCircle = ({user, content}) => {
     return dispatch => {
-        io.socket.emit("sendCircle", {users, content});
+        io.socket.emit("sendCircle", {user, content});
     }
 }
 

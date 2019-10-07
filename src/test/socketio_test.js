@@ -9,3 +9,6 @@ console.log("客户端向服务器发送了:", {name:"hello"});
 socket.on("receiveMsg", function(data) {
     console.log("客户端接收到了服务器的消息：", data);
 })
+socket.on("receiveCircle", function(data) {
+    console.log("circle", data);
+})

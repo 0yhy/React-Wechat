@@ -15,3 +15,5 @@ export const reqChatMsgList = () => ajax("http://localhost:1027/msglist", "GET")
 export const reqReadMsg = (from) => ajax("http://localhost:1027/readmsg", "POST", {from});
 //获取用户信息
 export const reqUser = () => ajax("http://localhost:1027/user");
+//获取朋友圈
+export const reqCircleList = () => ajax("http://localhost:1027/circle", "GET");;

@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { AUTH_SUCCESS, ERR_MSG, RECEIVE_USER_LIST, RECEIVE_MSG, RECEIVE_MSG_LIST, RECEIVE_USER } from "./action-types";
+import { AUTH_SUCCESS, ERR_MSG, RECEIVE_USER_LIST, RECEIVE_MSG, RECEIVE_MSG_LIST, RECEIVE_USER, RECEIVE_CIRCLE } from "./action-types";
 
 //包含多个reducer函数
 //根据老的state和指定的action返回新的state
@@ -59,7 +59,28 @@ function chat(state = initChat, action) {
     }
 }
 
+const initCircle = {
+    users:          {},
+    circleMsgs:     [],
+}
+function circle(state = initCircle, action) {
+    // const circleMsg = action.data;
+    // console.log(state.);
+    switch (action.type) {
+        case RECEIVE_CIRCLE:
+            const {users, circleMsgs} = action.data;
+            return {
+                // users:      state.users,
+                // circleMsgs: [...state.circleMsgs, circleMsg],
+                users,
+                circleMsgs     
+            }
+        default:
+            return state;
+    }
+}
+
 export default combineReducers({
-    user, userList,chat
+    user, userList, chat, circle
 })
 //向外暴露状态的结构：{user: {}, userList: [], chat{}}

@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 //import components
 import Wechat from "../../components/main/Wechat/Wechat";
 import Contact from "../Contact/Contact";
-import Discovery from "../../components/main/Discovery/Discovery";
+import Discovery from "../Discovery/Discovery";
 import Me from "../../components/main/Me/Me";
 import Footer from "../../components/main/Footer/Footer";
 import ChatPage from "../../containers/ChatPage/ChatPage";

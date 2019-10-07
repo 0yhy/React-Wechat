@@ -1,7 +1,7 @@
 //包含多个action creator
 //同步action & 异步action
-import {reqRegister, reqLogin, reqContact, reqChatMsgList, reqUser} from "../api/index";
-import {AUTH_SUCCESS, ERR_MSG, RECEIVE_USER_LIST, RECEIVE_MSG_LIST, RECEIVE_MSG, RECEIVE_USER} from "./action-types"
+import {reqRegister, reqLogin, reqContact, reqChatMsgList, reqUser, reqCircleList} from "../api/index";
+import {AUTH_SUCCESS, ERR_MSG, RECEIVE_USER_LIST, RECEIVE_MSG_LIST, RECEIVE_MSG, RECEIVE_USER, RECEIVE_CIRCLE} from "./action-types"
 import io from "socket.io-client";
 
 //单例对象：调用多次io(...)命令，但只创建一个socket对象
@@ -18,6 +18,10 @@ function initIO(dispatch, userid) {
             dispatch(receiveMsg(chatMsg));
         }
     })
+    io.socket.on("receveCircle", function(circleMsg) {
+        console.log("客户端收到了circle！！");
+        dispatch(receiveCircle(circleMsg));
+    })
 }
 
 //授权成功的同步action
@@ -32,6 +36,8 @@ export const receiveMsgList = ({users, chatMsgs}) => ({type: RECEIVE_MSG_LIST, d
 export const receiveUser = (user) => ({type:RECEIVE_USER, data :user});
 //接受一个消息
 export const receiveMsg = (chatMsg) => ({type:RECEIVE_MSG, data:chatMsg});
+//接受朋友圈
+export const receiveCircle = (circleMsg) => ({type:RECEIVE_CIRCLE, data:circleMsg});
 
 //注册异步action
 export const register = (user) => {
@@ -109,6 +115,22 @@ async function getMsgList(dispatch, userid) {
         const {users, chatMsgs} = result.data;
         //分发同步action
         dispatch(receiveMsgList({users, chatMsgs}))
+    }
+} 
+
+export const getCircleList = () => {
+    return async dispatch => {
+        const response = await reqCircleList();
+        const result = response.data;
+        // console.log(result);
+        if(result.code === 0) {
+            dispatch(receiveCircle(result.data));
+        }
+    }
+}
+export const sendCircle = ({users, content}) => {
+    return dispatch => {
+        io.socket.emit("sendCircle", {users, content});
     }
 }
 

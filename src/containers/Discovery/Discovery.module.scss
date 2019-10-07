@@ -1,0 +1,29 @@
+.header {
+    background-color:                               rgb(237, 237, 237);
+    height:                                         45px;
+    width:                                          100%;
+    position:                                       fixed;
+    top:                                            0;
+    font-size:                                      70%;
+    display:                                        flex;
+    flex-direction:                                 row;
+    align-items:                                    center;
+    z-index:                                        2;
+    h2 {
+        width:                                      80%;
+        margin:                                     0px 0px 0px 10px;
+        font-size:                                  130%;
+    }
+    img {
+        margin:                                     0px 15px 0px 5px;
+    }
+}
+
+
+.circleheader {
+    display:                                flex;
+    flex-direction:                         row;
+    img {
+        border-radius:                      50%;
+    }
+}

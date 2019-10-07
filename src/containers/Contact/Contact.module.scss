@@ -30,9 +30,14 @@
     display:                                        flex;
     align-items:                                    center;
     border-bottom:                                  1px solid rgb(237, 237, 237);
+    padding:                                        0px 0px 0px 10px;
 }
 .contacts {
     width:                                          100%;
+    img {
+        border-radius:                              50%;
+        margin:                                     0px 10px 0px 0px;
+    }
 }
 .letters {
     display:                                        flex;

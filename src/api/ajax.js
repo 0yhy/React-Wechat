@@ -3,6 +3,7 @@ import axios from "axios";
 export default function ajax(url,  type="GET", data={}) {
     let getString = "";
     if(type === "GET") {
+        // console.log(url, data)
         //data: {username:shaun, password:123}
         //要发送get请求，我们要将发送过来的json中的data拼成如下字符串的形式
         //String: username=shaun&password=123

@@ -74,8 +74,6 @@ class Contact extends React.Component {
                 <div className={css.letters}>
                     {isdisplay.map((item, index) => item === 0 ? null : <span key={index} onClick={() => {
                         document.querySelector("#" + String.fromCharCode(index + 65)).scrollIntoView();
-                    }} onmousedown={() => {
-                        this.onmouseover = () => document.querySelector("#" + String.fromCharCode(index + 65)).scrollIntoView();
                     }}>
                         {String.fromCharCode(index + 65)}
                     </span>)}

@@ -27,6 +27,12 @@ class ChatPage extends React.Component {
         //清楚输入
         this.setState({content:""})
     }
+    enterSend = () => {
+        if(window.event.keyCode === 13) {
+            console.log("!!")
+            this.sendMsg();
+        }
+    }
     render() {
         const {user} = this.props;
         const {users, chatMsgs} = this.props.chat;
@@ -62,7 +68,7 @@ class ChatPage extends React.Component {
                 })}
             </div>
             <div className={css.input}>
-                <input onChange={(e) => {this.setState({content: e.target.value})}} value={this.state.content}></input>
+                <input onKeyPress={this.enterSend} onChange={(e) => {this.setState({content: e.target.value})}} value={this.state.content}></input>
                 <button onClick={this.sendMsg}>发送</button>
             </div>
         </div>

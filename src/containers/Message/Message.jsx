@@ -7,7 +7,6 @@ class Message extends React.Component {
     constructor() {
         super();
         this.state = {
-            
         }
     }
     getLastMsgs = (chatMsgs, userid) => {

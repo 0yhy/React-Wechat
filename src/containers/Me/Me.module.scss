@@ -1,0 +1,52 @@
+.header {
+    background-color:                               rgb(237, 237, 237);
+    height:                                         45px;
+    width:                                          100%;
+    position:                                       fixed;
+    top:                                            0;
+    font-size:                                      70%;
+    display:                                        flex;
+    flex-direction:                                 row;
+    align-items:                                    center;
+    z-index:                                        2;
+    h2 {
+        width:                                      80%;
+        margin:                                     0px 0px 0px 10px;
+        font-size:                                  130%;
+    }
+    img {
+        margin:                                     0px 15px 0px 5px;
+    }
+    button {
+        width:                                      50px; /* 宽度 */
+        height:                                     30px; /* 高度 */
+        border-width:                               0px; /* 边框宽度 */
+        border-radius:                              4px; /* 边框半径 */
+        background:                                 #1E90FF; /* 背景颜色 */
+        cursor:                                     pointer; /* 鼠标移入按钮范围时出现手势 */
+        outline:                                    none; /* 不显示轮廓线 */
+        font-family:                                Microsoft YaHei; /* 设置字体 */
+        color:                                      white; /* 字体颜色 */
+        margin:                                     0px 10px 0px 0px;
+    }
+}
+
+.input {
+    position:                                       absolute;
+    top:                                            45px;
+    bottom:                                         8%;
+    width:                                          100%;
+    display:                                        flex;
+    flex-direction:                                 column;
+    overflow-y:                                     scroll;
+    textarea {
+        // width:                                      90%;
+        // margin-left:                                5%;
+        height:                                     50%;
+        border:                                     none;
+        border-radius:                              20px;
+        padding:                                    10px;
+        font-family:                                'Times New Roman', Times, serif;
+        font-size:                                  95%;
+    }
+}

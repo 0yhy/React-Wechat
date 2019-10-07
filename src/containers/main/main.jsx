@@ -6,14 +6,14 @@ import Cookies from "js-cookie";
 import Wechat from "../../components/main/Wechat/Wechat";
 import Contact from "../Contact/Contact";
 import Discovery from "../Discovery/Discovery";
-import Me from "../../components/main/Me/Me";
+import Me from "../Me/Me";
 import Footer from "../../components/main/Footer/Footer";
 import ChatPage from "../../containers/ChatPage/ChatPage";
 import Sub from "../../components/main/Wechat/Sub/Sub";
-import Login from "../login/login";
+// import Login from "../login/login";
 import SendCircle from "../Discovery/SendCircle/SendCircle";
 
-import {getUser, sendCircle} from "../../redux/actions";
+import {getUser} from "../../redux/actions";
 
 
 
@@ -77,7 +77,7 @@ class Main extends React.Component {
         return <div>
              <Switch>
                 {
-                    this.navList.map(nav => <Route path={nav.path} component={nav.component}></Route>)
+                    this.navList.map((nav, index) => <Route key={index} path={nav.path} component={nav.component}></Route>)
                 }
              </Switch>
              {/* <Route path="/" component={Wechat}></Route> */}
